@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+}
+
+.contact-us-link {
+  margin: 1em 0;
+  min-width: 250px;
+}

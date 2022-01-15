@@ -1,0 +1,42 @@
+<div class="wrapper">
+  <h1 nz-typography>Contact us at:</h1>
+  <a class="contact-us-link" href="https://discord.gg/4attXXE" target="_blank">
+    <nz-card [nzHoverable]="true">
+      <nz-card-meta
+        class="centered"
+        nzTitle="Discord"
+        [nzAvatar]="discordAvatar"
+        nzDescription="#seedswap-braintrust"
+      ></nz-card-meta>
+      <ng-template #discordAvatar>
+        <nz-avatar class="contain-logo" nzSrc="/assets/Discord-Logo-Color.svg" nzSize="large" customSize="14"></nz-avatar>
+      </ng-template>
+    </nz-card>
+  </a>
+  <a class="contact-us-link" href="https://www.reddit.com/r/PepperLovers/" target="_blank">
+    <nz-card [nzHoverable]="true">
+      <nz-card-meta
+        class="centered"
+        nzTitle="Reddit"
+        [nzAvatar]="redditAvatar"
+        nzDescription="/r/pepperlovers"
+      ></nz-card-meta>
+      <ng-template #redditAvatar>
+        <nz-avatar nzIcon="reddit" nzSize="large"></nz-avatar>
+      </ng-template>
+    </nz-card>
+  </a>
+  <a class="contact-us-link" href="https://github.com/hbgwhite/pepperplatform" target="_blank">
+    <nz-card [nzHoverable]="true">
+      <nz-card-meta
+        class="centered"
+        nzTitle="Github"
+        [nzAvatar]="githubAvatar"
+        nzDescription="Pepper Platform"
+      ></nz-card-meta>
+      <ng-template #githubAvatar>
+        <nz-avatar nzIcon="github" nzSize="large"></nz-avatar>
+      </ng-template>
+    </nz-card>
+  </a>
+</div>

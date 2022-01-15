@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <h1 nz-typography>Collaborate with us at:</h1>
+  <a href="https://github.com/hbgwhite/pepperplatform" target="_blank">
+    <nz-card [nzHoverable]="true">
+      <nz-card-meta
+        class="centered"
+        nzTitle="Github"
+        [nzAvatar]="githubAvatar"
+        nzDescription="Pepper Platform"
+      ></nz-card-meta>
+      <ng-template #githubAvatar>
+        <nz-avatar nzIcon="github" nzSize="large"></nz-avatar>
+      </ng-template>
+    </nz-card>
+  </a>
+</div>
