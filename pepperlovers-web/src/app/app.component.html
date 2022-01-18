@@ -1,0 +1,128 @@
+<nz-layout class="app-layout">
+  <nz-sider
+    class="menu-sidebar"
+    nzCollapsible
+    nzWidth="256px"
+    nzBreakpoint="md"
+    [(nzCollapsed)]="isCollapsed"
+    [nzTrigger]="null"
+  >
+    <div class="sidebar-logo">
+      <img src="/assets/pepper-lovers-logo.png" alt="logo" />
+      <h1>Pepper Lovers Exchange</h1>
+    </div>
+    <ul
+      nz-menu
+      [nzTheme]="darkMode ? 'dark' : 'light'"
+      nzMode="inline"
+      [nzInlineCollapsed]="isCollapsed"
+    >
+      <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="welcome">Welcome</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="profile">
+              <span>Profile</span>
+            </a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="server-stats">Server Statistics</a>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu nzOpen nzTitle="2023 Seed Exchange" nzIcon="team">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="timeline/2023">Timeline</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="my-accessions/2023">My Accessions</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="all-accessions/2023">All Accessions</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="statistics/2023">Statistics</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="shipment/2023">Ship Package</a>
+          </li>
+        </ul>
+      </li>
+      <ng-container *ngIf="!isCollapsed">
+        <li
+          nz-submenu
+          [nzOpen]="false"
+          nzTitle="2022 Seed Exchange"
+          nzIcon="history"
+          class="historical"
+        >
+          <ul>
+            <li nz-menu-item nzMatchRouter>
+              <a routerLink="timeline/2022">Timeline</a>
+            </li>
+            <li nz-menu-item nzMatchRouter>
+              <a routerLink="my-accessions/2022">My Accessions</a>
+            </li>
+            <li nz-menu-item nzMatchRouter>
+              <a routerLink="all-accessions/2022">All Accessions</a>
+            </li>
+            <li nz-menu-item nzMatchRouter>
+              <a routerLink="statistics/2022">Statistics</a>
+            </li>
+            <li nz-menu-item nzMatchRouter>
+              <a routerLink="shipment/2022">Ship Package</a>
+            </li>
+          </ul>
+        </li>
+      </ng-container>
+      <li nz-submenu nzOpen nzTitle="Info" nzIcon="form">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="faq">FAQ</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="community-guidelines">Community Guidelines</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="privacy-policy">Privacy Policy</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="contribute">Contribute</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="contact-us">Contact Us</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="support-us">Support Us</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="changelog">Changelog</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <div class="app-header">
+        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+          <i
+            class="trigger"
+            [style.color]="darkMode ? 'white' : 'black'"
+            nz-icon
+            [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+          ></i>
+        </span>
+        <nz-avatar class="avatar" [nzSize]="40" nzIcon="user"></nz-avatar>
+      </div>
+    </nz-header>
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
