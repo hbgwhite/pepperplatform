@@ -28,6 +28,12 @@
             </a>
           </li>
           <li nz-menu-item nzMatchRouter>
+            <a routerLink="seed-exchanges">Seed Exchanges</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="start-exchange">Start an Exchange</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
             <a routerLink="server-stats">Server Statistics</a>
           </li>
         </ul>
@@ -61,7 +67,7 @@
         >
           <ul>
             <li nz-menu-item nzMatchRouter>
-              <a routerLink="timeline/2022">Timeline</a>
+              <a [routerLink]="['timeline', '2022']">Timeline</a>
             </li>
             <li nz-menu-item nzMatchRouter>
               <a routerLink="my-accessions/2022">My Accessions</a>

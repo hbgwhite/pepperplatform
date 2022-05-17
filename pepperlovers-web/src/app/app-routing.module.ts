@@ -50,6 +50,16 @@ const routes: Routes = [
       import('./pages/server-stats/server-stats.module').then((m) => m.ServerStatsModule),
   },
   {
+    path: 'seed-exchanges',
+    loadChildren: () =>
+      import('./pages/seed-exchanges/seed-exchanges.module').then((m) => m.SeedExchangesModule),
+  },
+  {
+    path: 'start-exchange',
+    loadChildren: () =>
+      import('./pages/start-exchange/start-exchange.module').then((m) => m.StartExchangeModule),
+  },
+  {
     path: 'shipment',
     loadChildren: () => import('./pages/shipment/shipment.module').then((m) => m.ShipmentModule),
   },
